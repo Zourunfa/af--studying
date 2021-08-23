@@ -1,3 +1,9 @@
+''，undefined, null, 0， NaN。除了这5个假值以外
+
+其他所有值转布尔类型都是true。一切对象都是真值，包括new Boolean(false
+
+
+
 ## for in 和 for of 的区别
 
 无论是for...in还是for...of语句都是迭代一些东西。它们之间的主要区别在于它们的迭代方式。

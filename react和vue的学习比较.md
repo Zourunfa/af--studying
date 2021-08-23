@@ -44,7 +44,8 @@
 
 
 
-
+- `e.target` 指向触发事件监听的对象。 事件委托中的 li 标签
+- `e.currentTarget` 指向添加监听事件的对象。 事件委托中的 ul 标签
 
 
 
@@ -362,7 +363,7 @@ setState还有一种传参方式
 
 
 
-## Vue（自定义事件通讯）
+## Vue（自定义事件通讯） vue3不支持此功能但是可以用插件mitt
 
  $event.emit   绑定自定义事件（尽量绑定函数名字，方便event.$off在beforeUpdate时解绑）
 

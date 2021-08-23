@@ -409,7 +409,7 @@ export default defineComponent({
 
 
 
-编辑文章页面和新建文章界面的区别是多个编辑的按钮和将就文章的内容也展示出来好修改。发送的请求类型也不一样，一个是post一个patch更新数据，在展示文章的组件的编辑按钮中的router-link添加一个query,点击编辑按钮后进入编辑文章页面的时候，用route对象拿到这个query。然后根据这个query发送patch异步请求拿到数据填充文章页面的表单，当从父组件createPost页面发送异步请求后，判断是否上传的一个bool值传给uploader子组件时，这个值是undefined，因为vue3的组件生命周期setup函数的逻辑只执行了一次，而这个bool值是异步请求成功后再改变的，所以要用watch动态监听这个值，
+编辑文章页面和新建文章界面的区别是多个编辑的按钮和将就文章的内容也展示出来好修改。发送的请求类型也不一样，一个是post一个patch更新数据，**在展示文章的组件的编辑按钮中的router-link添加一个query,点击编辑按钮后进入编辑文章页面的时候，用route对象拿到这个query。然后根据这个query发送patch异步请求拿到数据填充文章页面的表单，当从父组件createPost页面发送异步请求后**，**判断是否上传的一个bool值传给uploader子组件时，这个值是undefined，因为vue3的组件生命周期setup函数的逻辑只执行了一次，而这个bool值是异步请求成功后再改变的，所以要用watch动态监听这个值，**
 
 
 
@@ -431,8 +431,8 @@ export default defineComponent({
 
 ## vue3父子组件自定义v-model
 
-在父组件设置modelValue变量 放在 v-model中
-则在子组件的props属性 会有一个modelValue属性 ，可看下面的子组件console出来的propsS
+**在父组件设置modelValue变量 放在 v-model中**
+**则在子组件的props属性 会有一个modelValue属性 ，可看下面的子组件console出来的propsS**
 也就是你会发现子组件的proos.modelValue的值 会是父组件 v-model的值
 第二步 在子组件中emit context.emit(‘update:modelValue’, targetValue)
 

@@ -84,4 +84,5 @@ arr.fakeFlat()
 
 - 执行async函数，返回的是Promise对象
 - await相当于Promise的then
-- try..catch可捕获异常,代替了Promise 的catch
+- try..catch可捕获异常但是只能捕获同步的异常
+
